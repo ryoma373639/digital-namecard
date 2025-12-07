@@ -1,0 +1,169 @@
+issues:
+  # マスターIssue
+  - title: "デジタル名刺Webアプリケーション開発"
+    type: feature
+    requirements:
+      - プロフィール表示機能（写真、名前、自己紹介）
+      - SNSリンク統合（Instagram、X、Threads）
+      - AIチャットボット機能（Claude API統合、コンテキスト付き）
+      - レスポンシブデザイン対応
+      - デプロイ設定（Vercel/Firebase）
+    tech_stack:
+      - Next.js 14 (App Router)
+      - React 18
+      - TypeScript
+      - Tailwind CSS
+      - Claude API (Anthropic)
+    constraints:
+      - モバイルファーストデザイン
+      - アクセシビリティ対応（WCAG 2.1 AA準拠）
+      - パフォーマンス最適化（Lighthouse 90点以上）
+    priority: high
+    autoExecute: false
+    assignee: ""
+
+  # サブIssue 1: プロジェクト初期設定
+  - title: "プロジェクト初期設定・技術スタック構築"
+    type: feature
+    requirements:
+      - Next.js 14プロジェクトセットアップ
+      - TypeScript設定
+      - Tailwind CSS設定
+      - ESLint/Prettier設定
+      - Git pre-commit hooks設定
+      - 基本的なディレクトリ構造作成
+    tech_stack:
+      - Next.js 14
+      - TypeScript
+      - Tailwind CSS
+      - Husky + lint-staged
+    priority: high
+    autoExecute: true
+
+  # サブIssue 2: UI/UXデザイン
+  - title: "UI/UXデザイン・コンポーネント設計"
+    type: feature
+    requirements:
+      - デジタル名刺のレイアウト設計
+      - カラースキーム・タイポグラフィ決定
+      - レスポンシブデザイン設計（モバイル/タブレット/デスクトップ）
+      - アニメーション効果設計
+      - アクセシビリティ対応設計
+    tech_stack:
+      - Tailwind CSS
+      - CSS Variables
+      - Framer Motion (アニメーション)
+    priority: high
+    autoExecute: true
+
+  # サブIssue 3: プロフィールセクション開発
+  - title: "プロフィールセクション開発"
+    type: feature
+    requirements:
+      - プロフィール表示コンポーネント作成
+      - アバター/写真表示機能
+      - 名前・肩書き表示
+      - 自己紹介テキスト表示
+      - アニメーション効果実装
+    tech_stack:
+      - React Components
+      - Next.js Image
+      - Tailwind CSS
+    priority: medium
+    autoExecute: true
+
+  # サブIssue 4: SNSリンクセクション開発
+  - title: "SNSリンクセクション開発"
+    type: feature
+    requirements:
+      - SNSアイコン・リンクコンポーネント作成
+      - Instagram リンク統合
+      - X (Twitter) リンク統合
+      - Threads リンク統合
+      - ホバーエフェクト実装
+      - 外部リンククリック解析機能
+    tech_stack:
+      - React Components
+      - React Icons / Lucide Icons
+      - Next.js Link
+    priority: medium
+    autoExecute: true
+
+  # サブIssue 5: チャットボット機能開発
+  - title: "AIチャットボット機能開発（Claude API統合）"
+    type: feature
+    requirements:
+      - チャットUIコンポーネント作成
+      - Claude API統合
+      - コンテキストデータ設計・実装（自己紹介、スキル、経歴）
+      - 会話履歴管理機能
+      - レスポンス最適化
+      - エラーハンドリング
+    tech_stack:
+      - Claude API (@anthropic-ai/sdk)
+      - React State Management
+      - Next.js API Routes
+    priority: high
+    autoExecute: true
+
+  # サブIssue 6: バックエンド/API開発
+  - title: "バックエンド/API開発"
+    type: feature
+    requirements:
+      - Next.js API Routes セットアップ
+      - チャットボットAPIエンドポイント
+      - レート制限実装
+      - 環境変数管理
+      - エラーハンドリング
+    tech_stack:
+      - Next.js API Routes
+      - Vercel Edge Functions
+    priority: high
+    autoExecute: true
+
+  # サブIssue 7: デプロイ・インフラ
+  - title: "デプロイ・インフラ設定"
+    type: feature
+    requirements:
+      - Vercelデプロイ設定
+      - 環境変数設定（本番/開発）
+      - カスタムドメイン設定
+      - SSL証明書設定
+      - CDN設定
+    tech_stack:
+      - Vercel
+      - GitHub Actions (CI/CD)
+    priority: medium
+    autoExecute: true
+
+  # サブIssue 8: テスト・品質保証
+  - title: "テスト・品質保証"
+    type: test
+    requirements:
+      - コンポーネントユニットテスト
+      - チャットボット機能テスト
+      - E2Eテスト
+      - クロスブラウザテスト
+      - モバイルデバイステスト
+      - アクセシビリティテスト
+    tech_stack:
+      - Jest
+      - React Testing Library
+      - Playwright (E2E)
+    priority: medium
+    autoExecute: true
+
+  # サブIssue 9: 最適化・仕上げ
+  - title: "パフォーマンス最適化・仕上げ"
+    type: performance
+    requirements:
+      - パフォーマンス最適化（画像最適化、コード分割）
+      - SEO対策（メタタグ、OGP設定）
+      - OGP画像作成
+      - Lighthouseスコア改善（90点以上目標）
+      - ドキュメント作成（README.md更新）
+    tech_stack:
+      - Next.js Image Optimization
+      - next-seo
+    priority: low
+    autoExecute: true
